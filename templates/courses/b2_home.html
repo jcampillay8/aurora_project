@@ -1,0 +1,372 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{%block content%}
+
+
+
+    <title> TITULO {% block title %} {% endblock %}</title>
+
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+        <style>
+
+            .filter-section {
+                margin-top: 20px;
+            }
+            .filter-container ul {
+                padding: 0;
+                list-style: none;
+            }
+            .filter-container li {
+                display: inline-block;
+                margin-right: 10px;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .filter-container li a {
+                display: block;
+                padding: 5px 10px;
+                font-size: 14px;
+                color: #000;
+                text-decoration: none;
+                border: 1px solid transparent;
+                transition: all 0.3s;
+            }
+            .filter-container li span {
+                display: none;
+            }
+            @media (max-width: 768px) {
+                .filter-container li {
+                    width: 100%;
+                }
+                .filter-container li span {
+                    display: inline;
+                }
+            }
+            @media (max-width: 480px) {
+                .filter-container li {
+                    white-space: normal;
+                }
+            }
+        </style>
+    </head>
+<!-- header-slider-area start -->
+<!-- header-slider-area start -->
+
+  <!-- Intro -->
+<section class="page-section" id="intro">
+    <div class="container intro">
+        <div class="row margin-bottom-50">
+            <div class="col-md-12 text-center">
+                <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "B2"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
+                <hr class="title-underline-center mx-auto">
+                <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!--service end-->
+
+
+    <body>
+        <!-- Contact Section -->
+        <section class="container" id="what_am_I_currently_studying">
+            <div class="d-flex flex-column align-items-center">
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Estructura Condicionales y Subjuntivas" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Las estructuras condicionales y subjuntivas se utilizan para expresar condiciones hipotéticas y situaciones irreales. Incluye primer, segundo, tercer condicional y condicionales mixtas.<br>
+                                    <strong>Objetivo:</strong> Enseñar a formar y usar correctamente las estructuras condicionales y subjuntivas en diferentes contextos.<br>
+                                    <strong>Alcance:</strong> Uso de diferentes tipos de condicionales y subjuntivos en oraciones complejas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Voz Pasiva y Estilo Indirecto" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> La voz pasiva se utiliza para centrar la atención en la acción en lugar del sujeto. El estilo indirecto avanzado se utiliza para reportar lo que alguien más ha dicho con más detalles.<br>
+                                    <strong>Objetivo:</strong> Enseñar a formar y usar correctamente la voz pasiva y el estilo indirecto avanzado.<br>
+                                    <strong>Alcance:</strong> Uso de voz pasiva y estilo indirecto avanzado en oraciones complejas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Tiempos Verbales" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los tiempos verbales son esenciales para expresar acciones en diferentes momentos. Incluyen: Presente Perfecto Continuo, Pasado Perfecto Continuo, Futuro Perfecto, Futuro Perfecto Continuo.<br>
+                                    <strong>Objetivo:</strong> Enseñar a formar y usar correctamente estos tiempos verbales para describir acciones en el pasado, presente y futuro.<br>
+                                    <strong>Alcance:</strong> Uso de diversos tiempos verbales en oraciones afirmativas, negativas e interrogativas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Artículos" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> El uso de artículos es esencial para la especificidad en inglés. Incluye el uso de "the" con nombres propios y el uso del artículo cero (zero article).<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de los artículos en diferentes contextos.<br>
+                                    <strong>Alcance:</strong> Uso de artículos definidos e indefinidos en oraciones.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Preposiciones" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Las frases preposicionales comunes se utilizan para indicar la posición de algo en relación con otra cosa. Ejemplos incluyen: in front of, next to, between.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de las preposiciones en frases comunes.<br>
+                                    <strong>Alcance:</strong> Uso de preposiciones en oraciones para describir ubicaciones y relaciones espaciales.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Adjetivos y Adverbios" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los adjetivos y adverbios se utilizan para describir cualidades y modificar verbos, respectivamente. Incluye el orden de los adjetivos y adverbios de modo, lugar y tiempo (quickly, here, now).<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de adjetivos y adverbios en oraciones.<br>
+                                    <strong>Alcance:</strong> Uso de adjetivos y adverbios para proporcionar información adicional sobre sustantivos y verbos.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Conjunciones y Conectores" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los conectores de discurso avanzados se utilizan para estructurar el discurso y conectar ideas complejas. Ejemplos incluyen: furthermore, however, therefore.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de conectores de discurso para una comunicación efectiva.<br>
+                                    <strong>Alcance:</strong> Uso de conectores de discurso avanzados en oraciones para conectar ideas y estructurar el discurso.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Modal Verbs" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los verbos modales se utilizan para expresar deducción y especulación. Ejemplos incluyen: must, might, could, can't.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso de verbos modales para expresar deducción y especulación.<br>
+                                    <strong>Alcance:</strong> Uso de verbos modales en oraciones afirmativas, negativas e interrogativas para expresar diferentes niveles de certeza.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Phrasal Verbs" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los phrasal verbs avanzados son combinaciones de verbos con preposiciones o adverbios que adquieren un significado específico. Son más complejos que los phrasal verbs básicos.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso de phrasal verbs avanzados en contextos más complejos.<br>
+                                    <strong>Alcance:</strong> Uso de phrasal verbs avanzados en oraciones para expresar diferentes acciones y significados.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Reported Speech (Discurso Indirecto)" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> El discurso indirecto avanzado se utiliza para reportar lo que alguien más ha dicho con más detalles y precisión.<br>
+                                    <strong>Objetivo:</strong> Enseñar a transformar oraciones directas en discurso indirecto avanzado, incluyendo los cambios de tiempo verbal y pronombres.<br>
+                                    <strong>Alcance:</strong> Uso de discurso indirecto avanzado en oraciones para reportar declaraciones, preguntas y órdenes.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Expresiones de Cantidad" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Las expresiones de cantidad se utilizan para describir la cantidad de algo. Incluye: few, little, y cuantificadores avanzados como: plenty of, a great deal of.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de expresiones de cantidad avanzadas en diferentes contextos.<br>
+                                    <strong>Alcance:</strong> Uso de expresiones de cantidad avanzadas en oraciones afirmativas, negativas e interrogativas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Estructuras de Subjuntivo e Imperativo" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> El subjuntivo se utiliza en contextos formales para expresar deseos, demandas o sugerencias. Las estructuras imperativas se utilizan para dar órdenes o instrucciones.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto del subjuntivo en contextos formales y de las estructuras imperativas.<br>
+                                    <strong>Alcance:</strong> Uso del subjuntivo e imperativo en oraciones para expresar deseos, demandas, sugerencias y órdenes.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Otros Tiempos Verbales" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Los tiempos verbales avanzados son esenciales para expresar acciones en diferentes momentos con más precisión. Incluye: Present Perfect Continuous, Past Perfect Continuous, Future Perfect Continuous.<br>
+                                    <strong>Objetivo:</strong> Enseñar a formar y usar correctamente estos tiempos verbales avanzados.<br>
+                                    <strong>Alcance:</strong> Uso de diversos tiempos verbales avanzados en oraciones afirmativas, negativas e interrogativas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{% translate "Estructuras Comparativas y Condicionales Avanzadas" %}</h5>
+                                <p class="card-text">
+                                    <strong>Descripción:</strong> Las estructuras comparativas y condicionales avanzadas se utilizan para hacer comparaciones y expresar condiciones complejas. Incluye: Inversion in Conditionals, Correlative Comparatives.<br>
+                                    <strong>Objetivo:</strong> Enseñar el uso correcto de estructuras comparativas y condicionales avanzadas.<br>
+                                    <strong>Alcance:</strong> Uso de estructuras comparativas y condicionales avanzadas en oraciones para expresar condiciones y comparaciones complejas.
+                                </p>
+                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    
+    
+</section><!--/.service-->
+    
+
+
+
+
+
+
+      {%endblock%}
+
+      <script>
+        function validateLanguage() {
+            var languageSelect = document.getElementById("language");
+            if (languageSelect.value === "") {
+                alert("Choose Language is needed");
+                return false;
+            }
+            return true;
+        }
+    </script>

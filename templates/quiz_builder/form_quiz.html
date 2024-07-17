@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load plotly_dash %}
+{% block title %} Form Quiz Builder {% endblock%}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+
+    
+    <body>
+        <!-- Agrega los elementos Div aquí -->
+
+        <div class="{%plotly_class name='formulario_inicio_app'%}">  
+            {% if screen_width > 800 %}
+                {%plotly_app name="formulario_inicio_app" ratio=0.45%}
+            {% else %}
+                {%plotly_app name="formulario_inicio_app" ratio=0.45%}
+            {% endif %}
+        </div>
+    </body>
+    <section class="position-relative py-4" >
+
+    </section>
+
+    {% else %}
+    <h1>Necesita <a href="/login">Iniciar sesion</a> para crear un post</h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,122 @@
+{% load static %}
+{% load i18n %}
+<style>
+  .hm-footer {
+    background: url('core/assets/img/footer.png') center center no-repeat;
+    background-size: contain;
+    background: #000;
+  }
+</style>
+<!--hm-footer start-->
+<section class="hm-footer footer py-5">
+  <div class="container">
+    <div class="hm-footer-details">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="hm-footer-widget">
+            <div class="hm-foot-title" >
+              <a class="navbar-brand d-flex align-items-center" href="{% url 'welcome' %}">
+                <img src="{% static 'images/logo/global_white.png' %}" alt="logo" width="50" height="50">
+                <span class="text-white fs-2 ms-3">Aurora Language</span>
+              </a>
+            </div>
+            <div class="hm-foot-para" style="padding-top: 40px;">
+              <p>{% blocktranslate %}Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktranslate %}</p>
+            </div>
+            <div class="hm-foot-icon">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa-solid fa-phone"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="hm-footer-widget">
+            <div class="hm-foot">
+              <h4 style="color:aliceblue;">{% translate "Useful Links" %}</h4>
+            </div>
+            <br>
+            <div class="footer-menu">
+              <ul class="list-unstyled">
+                <li><a href="{% url 'welcome' %}">{% translate "Home" %}</a></li>
+                <li><a href="#">{% translate "About" %}</a></li>
+                <li><a href="#">{% translate "Service" %}</a></li>
+                <li><a href="#">{% translate "Contact us" %}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="hm-footer-widget">
+            <div class="hm-foot">
+              <h4 style="color:aliceblue;">{% translate "Widsom Quotes" %}</h4>
+            </div>
+            <br>
+            <div class="hm-para-news">
+              <a href="#">{% blocktranslate %}"Success is not final, failure is not fatal. what matters is the courage to continue."{% endblocktranslate %}</a>
+              <span>Winston Churchill</span>
+            </div>
+            <div class="footer-line">
+              <div class="border-bottom"></div>
+            </div>
+            <div class="hm-para-news">
+              <a href="#">{% blocktranslate %}"The best way to predict the future is to create it."{% endblocktranslate %}</a>
+              <span>Peter Drucker</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="hm-footer-widget">
+            <div class="hm-foot">
+              <h4 style="color:aliceblue;">{% translate "Contact Me" %}</h4>
+            </div>
+            <br>
+            <div class="hm-foot-para">
+              <p class="para-news">{% blocktranslate %}Would like to have a talk, contact me!{% endblocktranslate %}</p>
+            </div>
+            <div class="hm-foot-email">
+              <div class="input-group">
+                <button class="btn btn" style="background-color: #ff561e; color: white;" type="button">{% translate "SEND" %}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--hm-footer end-->
+
+
+<!-- footer-copyright start -->
+<footer class="footer-copyright" style="background-color: black;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="foot-copyright pull-left">
+          <p>
+            &copy; {% blocktranslate %} All Rights Reserved. Designed and Developed by {% endblocktranslate %}
+          </p>
+        </div><!--/.foot-copyright-->
+      </div><!--/.col-->
+      <div class="col-sm-5">
+        <div class="foot-menu pull-right
+        ">	  
+          <ul>
+            <li ><a href="#">{% translate "legal" %}</a></li>
+            <li ><a href="#">{% translate "sitemap" %}</a></li>
+            <li ><a href="#">{% translate "privacy policy" %}</a></li>
+          </ul>
+        </div><!-- /.foot-menu-->
+      </div><!--/.col-->
+    </div><!--/.row-->
+    <div id="scroll-Top">
+      <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+    </div><!--/.scroll-Top-->
+  </div><!-- /.container-->
+</footer><!-- /.footer-copyright-->
+<div style="margin-bottom: -130px;"></div>
+<!-- footer-copyright end -->

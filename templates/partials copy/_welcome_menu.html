@@ -1,0 +1,126 @@
+{% load i18n %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <style>
+    .menu-link.active {
+      color: #ff561e !important;
+      border-bottom: 2px solid #ff561e !important;
+      padding-bottom: 1px;
+      
+    }
+    
+    .nav-links .drop-menu{
+      width: 400px; /* Ajusta este valor según tus necesidades */
+    }
+    
+
+    
+    .mega-box .content {
+      display: flex;
+      align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    }
+    @media screen and (max-width: 970px) {
+        .nav-links_personalizado li.about_personalizado_about_me input:checked ~ .mega-box_personalizado {
+          display: block !important;
+        }
+      }
+
+      .cancel-btn_personalizado {
+        display: none !important; /* Ocultar el botón por defecto */
+      }
+
+      @media only screen and (max-width: 768px) {
+        .cancel-btn_personalizado {
+          display: block !important; /* Mostrar el botón cuando la pantalla es pequeña */
+        }
+      }
+
+      .hovereffect {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .hovereffect .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .hovereffect:hover .overlay {
+        opacity: 1;
+      }
+
+      .team-content {
+        color: #fff;
+        padding: 20px;
+      }
+
+      .filter a.active {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .portfolio-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+
+      .portfolio-section:hover .overlay {
+        opacity: 1;
+      }
+
+      nav#menu_personalizado {
+        position: fixed;
+        padding-top: 5px;
+        top: 75px; /* Ajusta este valor según la altura de tu encabezado */
+        left: 0;
+        width: 100%;
+        background: #242526;/* Asegúrate de ajustar el color de fondo según tu diseño */
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Agrega sombra para destacar el menú */
+      }
+
+      @media screen and (max-width: 970px) {
+        nav#menu_personalizado {
+          top: 100px; /* Ajusta este valor según la altura combinada del encabezado en pantallas pequeñas */
+          z-index: 1100; /* Asegúrate de que el menú tenga un z-index mayor que el encabezado */
+        }
+      }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="font-awesome.min.css">
+</head>
+<body>
+  <nav id="menu_personalizado">
+    <div class="wrapper_personalizado">
+      <div class="logo_personalizado"><a href="{% if request.user.is_authenticated %}{% url 'home' %}{% else %}{% url 'welcome' %}{% endif %}">Jaime Campillay</a></div>
+      <input type="radio" name="slider_personalizado" id="menu-btn_personalizado">
+      <input type="radio" name="slider_personalizado" id="cancel-btn_personalizado">
+      <ul class="nav-links_personalizado">
+        <label for="cancel-btn_personalizado" class="btn cancel-btn_personalizado"><i class="fa fa-window-close"></i></label>
+        <li><a class="desktop-item menu-link {% if current_page == 'welcome' %}active{% endif %}" href="{% url 'home' %}">{% translate "Home" %} </a></li>
+        <li><a class="desktop-item menu-link {% if current_page == 'login' %}active{% endif %}" href="/authentication/login">{% translate "Login" %}</a></li>
+        <li><a class="desktop-item menu-link {% if current_page == 'register' %}active{% endif %}" href="/authentication/register">{% translate "Register" %}</a></li>
+        <li><a class="desktop-item menu-link {% if current_page == 'forgot_password' %}active{% endif %}" href="/authentication/request-password">{% translate "Forgot Password" %}</a></li>
+      </ul>
+      <label for="menu-btn_personalizado" class="btn menu-btn_personalizado"><i class="fa fa-bars"></i></label>
+    </div>
+  </nav>
+</body>
+</html>

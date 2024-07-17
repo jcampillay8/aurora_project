@@ -1,0 +1,111 @@
+{% load static %}
+{% load i18n %}
+<style>
+    .small-icon {
+        width: 24px;
+        height: 16px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-left, .header-right {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 970px) {
+        .header .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-right {
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 970px) {
+    .header-right {
+        padding-left:  25px;
+        
+        
+        
+        
+    }
+
+}
+
+    }
+</style>
+<!--header start-->
+<section class="header">
+    <div class="container">
+        <div class="header-left">
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>{{ request.user.email }}
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <a href="username:username:">
+                            
+                            {% if request.user.is_superuser %}
+                            {{ request.user.username }} {% translate "(Usuario Administrador)" %}
+                            {% elif request.user.is_staff %}
+                            {{ request.user.username }}{% translate "(Usuario Autenticado)" %}
+                            {% else %}
+                                {% translate "(Usuario Visita)" %}
+                            {% endif %}
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <form id="language-form" action="{% url 'set_language' %}" method="post" class="d-flex align-items-center">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                
+                <!-- Opciones de idioma -->
+                <div class="d-flex align-items-center" style="padding-right: 30px;">
+                    <input class="form-check-input" type="radio" name="language" value="en" id="languageEnglish" checked onchange="document.getElementById('language-form').submit();" {% if LANGUAGE_CODE == 'en' %}checked{% endif %}>
+                    <label class="form-check-label ms-2{% if LANGUAGE_CODE == 'en' %} active-language{% endif %}" for="languageEnglish">
+                        {% translate "English" %}
+                    </label>
+                    <img src="{% static 'images/logo/usa_england.ico' %}" class="small-icon ms-2" alt="USA Flag">
+                </div>
+
+                <div class="d-flex align-items-center ms-2">
+                    <input class="form-check-input" type="radio" name="language" value="es" id="languageSpanish" onchange="document.getElementById('language-form').submit();" {% if LANGUAGE_CODE == 'es' %}checked{% endif %}>
+                    <label class="form-check-label ms-2{% if LANGUAGE_CODE == 'es' %} active-language{% endif %}" for="languageSpanish">
+                        {% translate "Spanish" %}
+                    </label>
+                    <img src="{% static 'images/logo/chile_spain.ico' %}" class="small-icon ms-2" alt="Spain Flag">
+                </div>
+            </form>
+
+            <form action="{% url 'logout' %}" method="POST" class="logout-form d-inline ms-4">
+                {% csrf_token %}
+                <button class="btn" style="background: #ff561e;" type="submit">
+                    <strong><i class="fa fa-sign-out" aria-hidden="true"></i>{% translate " Logout" %}</strong>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!--header end-->

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load plotly_dash %}
+{% block title %} Quiz - GCP Digital Leader {% endblock%}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+
+    <body>
+        <!-- Agrega los elementos Div aquí -->
+
+        <div class="{%plotly_class name='Formulario_Quiz_Builder'%}">  
+            {% if screen_width > 800 %}
+                {%plotly_app name="Formulario_Quiz_Builder" ratio=0.45%}
+            {% else %}
+                {%plotly_app name="Formulario_Quiz_Builder" ratio=0.45%}
+            {% endif %}
+        </div>
+    </body>
+    <section class="position-relative py-4" >
+
+    </section>
+
+    {% else %}
+    <h1>Necesita <a href="/login">Iniciar sesion</a> para crear un post</h1>
+    {% endif %}
+{% endblock %}

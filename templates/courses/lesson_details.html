@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        <h1>{% translate "Details for" %} {{ course_level }} - {{ categoria_lesson }}</h1>
+        <div class="row">
+            {% for lesson in lessons %}
+                <div class="card mb-4" style="max-width: 970px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ lesson.Quiz_Name }}</h5>
+                                <p class="card-text">
+                                    <strong>{% translate "Course Level" %}:</strong> {{ lesson.Course_Level }}<br>
+                                    <strong>{% translate "Categoria Lesson" %}:</strong> {{ lesson.Categoria_Lesson }}<br>
+                                    <strong>{% translate "Lesson Content" %}:</strong> {{ lesson.Lesson_Content }}<br>
+                                    <strong>{% translate "Topic Father" %}:</strong> {{ lesson.Topic_Father }}<br>
+                                    <strong>{% translate "Topic Son" %}:</strong> {{ lesson.Topic_Son }}<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

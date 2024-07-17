@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <title>TITULO {% block title %}{% endblock %}</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+        <style>
+            .filter-section {
+                margin-top: 20px;
+            }
+            .filter-container ul {
+                padding: 0;
+                list-style: none;
+            }
+            .filter-container li {
+                display: inline-block;
+                margin-right: 10px;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .filter-container li a {
+                display: block;
+                padding: 5px 10px;
+                font-size: 14px;
+                color: #000;
+                text-decoration: none;
+                border: 1px solid transparent;
+                transition: all 0.3s;
+            }
+            .filter-container li span {
+                display: none;
+            }
+            @media (max-width: 768px) {
+                .filter-container li {
+                    width: 100%;
+                }
+                .filter-container li span {
+                    display: inline;
+                }
+            }
+            @media (max-width: 480px) {
+                .filter-container li {
+                    white-space: normal;
+                }
+            }
+        </style>
+    </head>
+
+    <section class="page-section" id="intro">
+        <div class="container intro">
+            <div class="row margin-bottom-50">
+                <div class="col-md-12 text-center">
+                    <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "A2"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
+                    <hr class="title-underline-center mx-auto">
+                    <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <body>
+            <!-- Contact Section -->
+            <section class="container" id="what_am_I_currently_studying">
+                <div class="d-flex flex-column align-items-center">
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Pronombres Reflexivos" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los pronombres reflexivos se utilizan cuando el sujeto y el objeto de la oración son la misma persona o cosa. Ejemplos incluyen: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso correcto de los pronombres reflexivos en oraciones.<br>
+                                        <strong>Alcance:</strong> Uso de pronombres reflexivos en contextos variados para enfatizar o referirse al mismo sujeto.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Pronombres Reflexivos' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Tiempos Verbales: Pasado Simple" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> El pasado simple se utiliza para describir acciones que ocurrieron y finalizaron en un momento específico del pasado. Incluye verbos regulares e irregulares.<br>
+                                        <strong>Objetivo:</strong> Enseñar a formar y usar el pasado simple con verbos regulares e irregulares.<br>
+                                        <strong>Alcance:</strong> Uso del pasado simple en oraciones afirmativas, negativas e interrogativas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Tiempos Verbales: Pasado Simple' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Preposiciones de Tiempo" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las preposiciones de tiempo indican cuándo ocurre algo. Ejemplos incluyen: at, on, in.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso correcto de las preposiciones de tiempo en diferentes contextos.<br>
+                                        <strong>Alcance:</strong> Uso de preposiciones de tiempo para describir momentos específicos o períodos de tiempo.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Preposiciones de Tiempo' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Conjunciones y Conectores" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las conjunciones coordinantes conectan palabras, frases o cláusulas que tienen la misma función. Ejemplos incluyen: and, but, or.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso de conjunciones coordinantes para conectar ideas de manera lógica.<br>
+                                        <strong>Alcance:</strong> Uso de conjunciones coordinantes en oraciones compuestas para unir ideas relacionadas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Conjunciones y Conectores' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Comparativos y Superlativos" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los comparativos se utilizan para comparar dos cosas, mientras que los superlativos se utilizan para destacar el grado más alto de una cualidad entre tres o más cosas. Incluye formas regulares e irregulares.<br>
+                                        <strong>Objetivo:</strong> Enseñar a formar y usar comparativos y superlativos en inglés.<br>
+                                        <strong>Alcance:</strong> Uso de comparativos y superlativos en oraciones para hacer comparaciones y destacar cualidades.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Comparativos y Superlativos' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Modal Verbs: Can, Could" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los verbos modales "can" y "could" se utilizan para expresar habilidad, posibilidad, permiso y solicitudes.<br>
+                                        <strong>Objetivo:</strong> Enseñar a usar "can" y "could" en diferentes contextos para expresar habilidades, permisos y solicitudes.<br>
+                                        <strong>Alcance:</strong> Uso de "can" y "could" en oraciones afirmativas, negativas e interrogativas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Modal Verbs: Can, Could' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Gerundios e Infinitivos" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Algunos verbos requieren que el verbo siguiente esté en forma de gerundio (verbo + ing) o infinitivo (to + verbo).<br>
+                                        <strong>Objetivo:</strong> Enseñar a identificar y usar verbos que requieren gerundios e infinitivos.<br>
+                                        <strong>Alcance:</strong> Uso de gerundios e infinitivos en oraciones para completar el significado de otros verbos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Nivel A2' categoria_lesson='Gerundios e Infinitivos' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </body>
+    </section>
+
+{% endblock %}
+
+<script>
+    function validateLanguage() {
+        var languageSelect = document.getElementById("language");
+        if (languageSelect.value === "") {
+            alert("Choose Language is needed");
+            return false;
+        }
+        return true;
+    }
+</script>
