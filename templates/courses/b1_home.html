@@ -2,20 +2,16 @@
 {% load static %}
 {% load i18n %}
 
-{%block content%}
+{% block content %}
 
+    <title>TITULO {% block title %}{% endblock %}</title>
 
-
-    <title> TITULO {% block title %} {% endblock %}</title>
-
-
-      <head>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
         <style>
-
             .filter-section {
                 margin-top: 20px;
             }
@@ -56,222 +52,226 @@
             }
         </style>
     </head>
-<!-- header-slider-area start -->
-<!-- header-slider-area start -->
 
-  <!-- Intro -->
-<section class="page-section" id="intro">
-    <div class="container intro">
-        <div class="row margin-bottom-50">
-            <div class="col-md-12 text-center">
-                <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "B1"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
-                <hr class="title-underline-center mx-auto">
-                <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+    <section class="page-section" id="intro">
+        <div class="container intro">
+            <div class="row margin-bottom-50">
+                <div class="col-md-12 text-center">
+                    <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "B1"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
+                    <hr class="title-underline-center mx-auto">
+                    <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+                </div>
             </div>
         </div>
-    </div>
 
+        <body>
+            <!-- Contact Section -->
+            <section class="container" id="what_am_I_currently_studying">
+                <div class="d-flex flex-column align-items-center">
 
-    
-    <!--service end-->
-
-
-    <body>
-        <!-- Contact Section -->
-        <section class="container" id="what_am_I_currently_studying">
-            <div class="d-flex flex-column align-items-center">
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Pronombres Relativos" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los pronombres relativos se utilizan para introducir cláusulas relativas, que proporcionan información adicional sobre un sustantivo. Ejemplos incluyen: who, whom, whose, which, that.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso correcto de los pronombres relativos en oraciones.<br>
-                                    <strong>Alcance:</strong> Uso de pronombres relativos en contextos variados para añadir información sobre personas y cosas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Pronombres" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los pronombres personales se utilizan para referirse a personas o cosas sin nombrarlas directamente. Los pronombres posesivos indican pertenencia.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso correcto de los pronombres personales y posesivos en oraciones.<br>
+                                        <strong>Alcance:</strong> Uso de pronombres en contextos simples y cotidianos, tanto personales como posesivos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Pronombres' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Tiempos Verbales" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los tiempos verbales son esenciales para expresar acciones en diferentes momentos. Incluyen: Presente Perfecto, Pasado Perfecto, Futuro Simple, Futuro Continuo, Present Continuous, Past Continuous, Future in the Past.<br>
-                                    <strong>Objetivo:</strong> Enseñar a formar y usar correctamente estos tiempos verbales para describir acciones en el pasado, presente y futuro.<br>
-                                    <strong>Alcance:</strong> Uso de diversos tiempos verbales en oraciones afirmativas, negativas e interrogativas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Conjunciones y Conectores" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las conjunciones subordinantes conectan una cláusula subordinada con una cláusula principal. Ejemplos incluyen: because, although, if.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso de conjunciones subordinantes para conectar ideas de manera lógica.<br>
-                                    <strong>Alcance:</strong> Uso de conjunciones subordinantes en oraciones compuestas para unir ideas relacionadas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Modal Verbs" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los verbos modales se utilizan para expresar posibilidad, obligación, permiso y otros matices. Ejemplos incluyen: may, might, must, shall, should, will, would.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso de verbos modales en diferentes contextos.<br>
-                                    <strong>Alcance:</strong> Uso de verbos modales en oraciones afirmativas, negativas e interrogativas para expresar diferentes significados.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Phrasal Verbs" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los phrasal verbs son combinaciones de verbos con preposiciones o adverbios que adquieren un significado específico. Pueden ser separables e inseparables.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso de phrasal verbs básicos en contextos cotidianos.<br>
-                                    <strong>Alcance:</strong> Uso de phrasal verbs en oraciones para expresar diferentes acciones y significados.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Reported Speech (Discurso Indirecto)" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> El discurso indirecto se utiliza para reportar lo que alguien más ha dicho, cambiando el tiempo verbal y los pronombres según sea necesario.<br>
-                                    <strong>Objetivo:</strong> Enseñar a transformar oraciones directas en discurso indirecto, incluyendo los cambios de tiempo verbal y pronombres.<br>
-                                    <strong>Alcance:</strong> Uso de discurso indirecto en oraciones para reportar declaraciones, preguntas y órdenes.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Claúsulas de Relativo (Relative Clauses)" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las cláusulas de relativo proporcionan información adicional sobre un sustantivo. Pueden ser restrictivas (esenciales para el significado de la oración) o no restrictivas (adicionales y separadas por comas).<br>
-                                    <strong>Objetivo:</strong> Enseñar a identificar y usar cláusulas de relativo restrictivas y no restrictivas.<br>
-                                    <strong>Alcance:</strong> Uso de cláusulas de relativo para añadir información sobre personas y cosas en oraciones.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Expresiones de Cantidad" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las expresiones de cantidad se utilizan para describir la cantidad de algo. Ejemplos incluyen: some, any, much, many.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso correcto de expresiones de cantidad en diferentes contextos.<br>
-                                    <strong>Alcance:</strong> Uso de expresiones de cantidad en oraciones afirmativas, negativas e interrogativas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las preguntas indirectas y las "tag questions" son estructuras avanzadas para preguntar y confirmar información.<br>
-                                    <strong>Objetivo:</strong> Enseñar a formular preguntas indirectas y "tag questions" para una comunicación más natural.<br>
-                                    <strong>Alcance:</strong> Uso de preguntas indirectas y "tag questions" en conversaciones y escritos.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </body>
-    
-    
-</section><!--/.service-->
-    
 
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Tiempos Verbales" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los tiempos verbales son esenciales para expresar acciones en diferentes momentos. Incluyen: Presente Perfecto, Pasado Perfecto, Futuro Simple, Futuro Continuo, Present Continuous, Past Continuous, Future in the Past.<br>
+                                        <strong>Objetivo:</strong> Enseñar a formar y usar correctamente estos tiempos verbales para describir acciones en el pasado, presente y futuro.<br>
+                                        <strong>Alcance:</strong> Uso de diversos tiempos verbales en oraciones afirmativas, negativas e interrogativas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Tiempos Verbales' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Conjunciones y Conectores" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las conjunciones subordinantes conectan una cláusula subordinada con una cláusula principal. Ejemplos incluyen: because, although, if.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso de conjunciones subordinantes para conectar ideas de manera lógica.<br>
+                                        <strong>Alcance:</strong> Uso de conjunciones subordinantes en oraciones compuestas para unir ideas relacionadas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Conjunciones y Conectores' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Modal Verbs" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los verbos modales se utilizan para expresar posibilidad, obligación, permiso y otros matices. Ejemplos incluyen: may, might, must, shall, should, will, would.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso de verbos modales en diferentes contextos.<br>
+                                        <strong>Alcance:</strong> Uso de verbos modales en oraciones afirmativas, negativas e interrogativas para expresar diferentes significados.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Modal Verbs' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Phrasal Verbs" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los phrasal verbs son combinaciones de verbos con preposiciones o adverbios que adquieren un significado específico. Pueden ser separables e inseparables.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso de phrasal verbs básicos en contextos cotidianos.<br>
+                                        <strong>Alcance:</strong> Uso de phrasal verbs en oraciones para expresar diferentes acciones y significados.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Phrasal Verbs' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Reported Speech (Discurso Indirecto)" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> El discurso indirecto se utiliza para reportar lo que alguien más ha dicho, cambiando el tiempo verbal y los pronombres según sea necesario.<br>
+                                        <strong>Objetivo:</strong> Enseñar a transformar oraciones directas en discurso indirecto, incluyendo los cambios de tiempo verbal y pronombres.<br>
+                                        <strong>Alcance:</strong> Uso de discurso indirecto en oraciones para reportar declaraciones, preguntas y órdenes.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Reported Speech (Discurso Indirecto)' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      {%endblock%}
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Claúsulas de Relativo (Relative Clauses)" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las cláusulas de relativo proporcionan información adicional sobre un sustantivo. Pueden ser restrictivas (esenciales para el significado de la oración) o no restrictivas (adicionales y separadas por comas).<br>
+                                        <strong>Objetivo:</strong> Enseñar a identificar y usar cláusulas de relativo restrictivas y no restrictivas.<br>
+                                        <strong>Alcance:</strong> Uso de cláusulas de relativo para añadir información sobre personas y cosas en oraciones.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Claúsulas de Relativo (Relative Clauses)' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <script>
-        function validateLanguage() {
-            var languageSelect = document.getElementById("language");
-            if (languageSelect.value === "") {
-                alert("Choose Language is needed");
-                return false;
-            }
-            return true;
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Expresiones de Cantidad" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las expresiones de cantidad se utilizan para describir la cantidad de algo. Ejemplos incluyen: some, any, much, many.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso correcto de expresiones de cantidad en diferentes contextos.<br>
+                                        <strong>Alcance:</strong> Uso de expresiones de cantidad en oraciones afirmativas, negativas e interrogativas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Expresiones de Cantidad' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las preguntas indirectas y las "tag questions" son estructuras avanzadas para preguntar y confirmar información.<br>
+                                        <strong>Objetivo:</strong> Enseñar a formular preguntas indirectas y "tag questions" para una comunicación más natural.<br>
+                                        <strong>Alcance:</strong> Uso de preguntas indirectas y "tag questions" en conversaciones y escritos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='B1' categoria_lesson='Estructuras de Preguntas y Negaciones' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </body>
+    </section>
+
+{% endblock %}
+
+<script>
+    function validateLanguage() {
+        var languageSelect = document.getElementById("language");
+        if (languageSelect.value === "") {
+            alert("Choose Language is needed");
+            return false;
         }
-    </script>
+        return true;
+    }
+</script>

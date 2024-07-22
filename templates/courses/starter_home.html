@@ -2,20 +2,16 @@
 {% load static %}
 {% load i18n %}
 
-{%block content%}
-
-
+{% block content %}
 
     <title> TITULO {% block title %} {% endblock %}</title>
 
-
-      <head>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
         <style>
-
             .filter-section {
                 margin-top: 20px;
             }
@@ -56,166 +52,166 @@
             }
         </style>
     </head>
-<!-- header-slider-area start -->
-<!-- header-slider-area start -->
+    <!-- header-slider-area start -->
+    <!-- header-slider-area start -->
 
-
-  <!-- Intro -->
-<section class="page-section" id="intro">
-    <div class="container intro">
-        <div class="row margin-bottom-50">
-            <div class="col-md-12 text-center">
-                <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "Starter"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
-                <hr class="title-underline-center mx-auto">
-                <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+    <!-- Intro -->
+    <section class="page-section" id="intro">
+        <div class="container intro">
+            <div class="row margin-bottom-50">
+                <div class="col-md-12 text-center">
+                    <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "Starter" %}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
+                    <hr class="title-underline-center mx-auto">
+                    <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+                </div>
             </div>
         </div>
-    </div>
 
+        <!--service end-->
 
-    
-    <!--service end-->
-
-
-    <body>
-        <!-- Contact Section -->
-        <section class="container" id="what_am_I_currently_studying">
-            <div class="d-flex flex-column align-items-center">
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+        <body>
+            <!-- Contact Section -->
+            <section class="container" id="what_am_I_currently_studying">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Pronombres Personales" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los pronombres personales son palabras que se utilizan para sustituir a los nombres y evitar su repetición. Los principales pronombres personales son: I, you, he, she, it, we, they.<br>
+                                        <strong>Objetivo:</strong> Introducir a los estudiantes en el uso correcto de los pronombres personales para identificar y referirse a las personas y cosas en las oraciones.<br>
+                                        <strong>Alcance:</strong> Uso de pronombres en contextos simples y cotidianos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Pronombres Personales' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Pronombres Personales" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los pronombres personales son palabras que se utilizan para sustituir a los nombres y evitar su repetición. Los principales pronombres personales son: I, you, he, she, it, we, they.<br>
-                                    <strong>Objetivo:</strong> Introducir a los estudiantes en el uso correcto de los pronombres personales para identificar y referirse a las personas y cosas en las oraciones.<br>
-                                    <strong>Alcance:</strong> Uso de pronombres en contextos simples y cotidianos.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Sustantivo" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los sustantivos son palabras que nombran a personas, animales, cosas, lugares, ideas o sentimientos. Se clasifican en contables (pueden ser contados, como "apple") e incontables (no se pueden contar individualmente, como "water").<br>
+                                        <strong>Objetivo:</strong> Enseñar a diferenciar entre sustantivos contables e incontables y su uso en oraciones.<br>
+                                        <strong>Alcance:</strong> Identificación y uso básico de sustantivos contables e incontables en diferentes contextos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Sustantivo' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Verbo 'to be'" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> El verbo "to be" es fundamental en inglés y se utiliza para expresar estados, identidades y características. Sus formas son: am, is, are.<br>
+                                        <strong>Objetivo:</strong> Familiarizar a los estudiantes con las diferentes formas del verbo "to be" y su correcta aplicación en oraciones afirmativas, negativas e interrogativas.<br>
+                                        <strong>Alcance:</strong> Uso del verbo "to be" en diversas situaciones para describir estados, identidades y características.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Verbo to be' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Artículos Definidos e Indefinidos" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los artículos definidos e indefinidos son palabras que acompañan a los sustantivos para indicar su especificidad. "A" y "an" son artículos indefinidos, mientras que "the" es el artículo definido.<br>
+                                        <strong>Objetivo:</strong> Enseñar la diferencia entre el uso de artículos definidos e indefinidos y cómo aplicarlos correctamente en las oraciones.<br>
+                                        <strong>Alcance:</strong> Uso de "a", "an" y "the" en contextos adecuados.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Artículos Definidos e Indefinidos' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Presente Simple" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> El presente simple se utiliza para expresar hábitos, rutinas, hechos generales y verdades universales. En su forma básica, se construye con el sujeto + verbo (agregando "s" en la tercera persona del singular).<br>
+                                        <strong>Objetivo:</strong> Introducir a los estudiantes en la estructura y uso del presente simple para describir acciones cotidianas y hechos.<br>
+                                        <strong>Alcance:</strong> Construcción y uso de oraciones en presente simple, incluyendo la tercera persona del singular.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Presente Simple' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las estructuras de preguntas y negaciones son esenciales para la comunicación. Las preguntas directas con el verbo "to be" se forman invirtiendo el sujeto y el verbo. Las negaciones se forman agregando "not" después del verbo "to be".<br>
+                                        <strong>Objetivo:</strong> Enseñar a formular preguntas y negaciones utilizando el verbo "to be".<br>
+                                        <strong>Alcance:</strong> Creación de preguntas directas y oraciones negativas con el verbo "to be" en diversas situaciones.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='Starter' categoria_lesson='Estructuras de Preguntas y Negaciones' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Sustantivo" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los sustantivos son palabras que nombran a personas, animales, cosas, lugares, ideas o sentimientos. Se clasifican en contables (pueden ser contados, como "apple") e incontables (no se pueden contar individualmente, como "water").<br>
-                                    <strong>Objetivo:</strong> Enseñar a diferenciar entre sustantivos contables e incontables y su uso en oraciones.<br>
-                                    <strong>Alcance:</strong> Identificación y uso básico de sustantivos contables e incontables en diferentes contextos.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Verbo 'to be'" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> El verbo "to be" es fundamental en inglés y se utiliza para expresar estados, identidades y características. Sus formas son: am, is, are.<br>
-                                    <strong>Objetivo:</strong> Familiarizar a los estudiantes con las diferentes formas del verbo "to be" y su correcta aplicación en oraciones afirmativas, negativas e interrogativas.<br>
-                                    <strong>Alcance:</strong> Uso del verbo "to be" en diversas situaciones para describir estados, identidades y características.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Artículos Definidos e Indefinidos" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los artículos definidos e indefinidos son palabras que acompañan a los sustantivos para indicar su especificidad. "A" y "an" son artículos indefinidos, mientras que "the" es el artículo definido.<br>
-                                    <strong>Objetivo:</strong> Enseñar la diferencia entre el uso de artículos definidos e indefinidos y cómo aplicarlos correctamente en las oraciones.<br>
-                                    <strong>Alcance:</strong> Uso de "a", "an" y "the" en contextos adecuados.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Presente Simple" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> El presente simple se utiliza para expresar hábitos, rutinas, hechos generales y verdades universales. En su forma básica, se construye con el sujeto + verbo (agregando "s" en la tercera persona del singular).<br>
-                                    <strong>Objetivo:</strong> Introducir a los estudiantes en la estructura y uso del presente simple para describir acciones cotidianas y hechos.<br>
-                                    <strong>Alcance:</strong> Construcción y uso de oraciones en presente simple, incluyendo la tercera persona del singular.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las estructuras de preguntas y negaciones son esenciales para la comunicación. Las preguntas directas con el verbo "to be" se forman invirtiendo el sujeto y el verbo. Las negaciones se forman agregando "not" después del verbo "to be".<br>
-                                    <strong>Objetivo:</strong> Enseñar a formular preguntas y negaciones utilizando el verbo "to be".<br>
-                                    <strong>Alcance:</strong> Creación de preguntas directas y oraciones negativas con el verbo "to be" en diversas situaciones.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </body>
-    
-    
-</section><!--/.service-->
-    
+            </section>
+        </body>
+    </section><!--/.service-->
 
+{% endblock %}
 
-
-
-
-
-      {%endblock%}
-
-      <script>
-        function validateLanguage() {
-            var languageSelect = document.getElementById("language");
-            if (languageSelect.value === "") {
-                alert("Choose Language is needed");
-                return false;
-            }
-            return true;
+<script>
+    function validateLanguage() {
+        var languageSelect = document.getElementById("language");
+        if (languageSelect.value === "") {
+            alert("Choose Language is needed");
+            return false;
         }
-    </script>
+        return true;
+    }
+</script>

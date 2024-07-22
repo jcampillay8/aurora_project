@@ -2,20 +2,16 @@
 {% load static %}
 {% load i18n %}
 
-{%block content%}
+{% block content %}
 
+    <title>TITULO {% block title %}{% endblock %}</title>
 
-
-    <title> TITULO {% block title %} {% endblock %}</title>
-
-
-      <head>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
         <style>
-
             .filter-section {
                 margin-top: 20px;
             }
@@ -56,146 +52,142 @@
             }
         </style>
     </head>
-<!-- header-slider-area start -->
-<!-- header-slider-area start -->
 
-  <!-- Intro -->
-<section class="page-section" id="intro">
-    <div class="container intro">
-        <div class="row margin-bottom-50">
-            <div class="col-md-12 text-center">
-                <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "A1"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
-                <hr class="title-underline-center mx-auto">
-                <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+    <section class="page-section" id="intro">
+        <div class="container intro">
+            <div class="row margin-bottom-50">
+                <div class="col-md-12 text-center">
+                    <h1 class="title-section"><span class="title-regular">{% translate "Level " %}<strong>{% translate "A1"%}</strong></span><br/>{% translate "Passionate about technology, programming, and machine learning" %}</h1>
+                    <hr class="title-underline-center mx-auto">
+                    <p class="lead">{% translate "Exploring innovative solutions at the intersection of code, data, and in pro of improving people's quality of life." %}</p>
+                </div>
             </div>
         </div>
-    </div>
 
+        <body>
+            <!-- Contact Section -->
+            <section class="container" id="what_am_I_currently_studying">
+                <div class="d-flex flex-column align-items-center">
 
-    
-    <!--service end-->
-
-
-    <body>
-        <!-- Contact Section -->
-        <section class="container" id="what_am_I_currently_studying">
-            <div class="d-flex flex-column align-items-center">
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Pronombres" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los pronombres personales se utilizan para referirse a personas o cosas sin nombrarlas directamente. Los pronombres posesivos indican pertenencia.<br>
-                                    <strong>Objetivo:</strong> Enseñar el uso correcto de los pronombres personales y posesivos en oraciones.<br>
-                                    <strong>Alcance:</strong> Uso de pronombres en contextos simples y cotidianos, tanto personales como posesivos.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Pronombres" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los pronombres personales se utilizan para referirse a personas o cosas sin nombrarlas directamente. Los pronombres posesivos indican pertenencia.<br>
+                                        <strong>Objetivo:</strong> Enseñar el uso correcto de los pronombres personales y posesivos en oraciones.<br>
+                                        <strong>Alcance:</strong> Uso de pronombres en contextos simples y cotidianos, tanto personales como posesivos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='A1' categoria_lesson='Pronombres' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Presente Simple" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> El presente simple se utiliza para expresar hábitos, rutinas, hechos generales y verdades universales. Incluye estructuras afirmativas, negativas e interrogativas.<br>
-                                    <strong>Objetivo:</strong> Introducir a los estudiantes en la estructura y uso del presente simple para describir acciones cotidianas y hechos.<br>
-                                    <strong>Alcance:</strong> Construcción y uso de oraciones en presente simple, incluyendo afirmativas, negativas e interrogativas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Presente Simple" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> El presente simple se utiliza para expresar hábitos, rutinas, hechos generales y verdades universales. Incluye estructuras afirmativas, negativas e interrogativas.<br>
+                                        <strong>Objetivo:</strong> Introducir a los estudiantes en la estructura y uso del presente simple para describir acciones cotidianas y hechos.<br>
+                                        <strong>Alcance:</strong> Construcción y uso de oraciones en presente simple, incluyendo afirmativas, negativas e interrogativas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='A1' categoria_lesson='Presente Simple' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Preposiciones" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las preposiciones de lugar y movimiento indican la posición de algo o la dirección en la que se mueve. Ejemplos incluyen: in, on, at, to, towards.<br>
-                                    <strong>Objetivo:</strong> Enseñar a los estudiantes a usar correctamente las preposiciones de lugar y movimiento en diversas situaciones.<br>
-                                    <strong>Alcance:</strong> Uso de preposiciones en oraciones para describir la ubicación y el movimiento de objetos y personas.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Preposiciones" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las preposiciones de lugar y movimiento indican la posición de algo o la dirección en la que se mueve. Ejemplos incluyen: in, on, at, to, towards.<br>
+                                        <strong>Objetivo:</strong> Enseñar a los estudiantes a usar correctamente las preposiciones de lugar y movimiento en diversas situaciones.<br>
+                                        <strong>Alcance:</strong> Uso de preposiciones en oraciones para describir la ubicación y el movimiento de objetos y personas.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='A1' categoria_lesson='Preposiciones' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Adjetivos y Adverbios" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Los adjetivos describen cualidades de los sustantivos, mientras que los adverbios modifican verbos, adjetivos y otros adverbios. Los adverbios de frecuencia indican con qué frecuencia ocurre una acción (always, usually, sometimes, rarely, never).<br>
-                                    <strong>Objetivo:</strong> Introducir a los estudiantes en el uso de adjetivos básicos y adverbios de frecuencia para describir personas, lugares, cosas y acciones.<br>
-                                    <strong>Alcance:</strong> Uso de adjetivos y adverbios en oraciones para proporcionar más información sobre los sustantivos y verbos.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Adjetivos y Adverbios" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Los adjetivos describen cualidades de los sustantivos, mientras que los adverbios modifican verbos, adjetivos y otros adverbios. Los adverbios de frecuencia indican con qué frecuencia ocurre una acción (always, usually, sometimes, rarely, never).<br>
+                                        <strong>Objetivo:</strong> Introducir a los estudiantes en el uso de adjetivos básicos y adverbios de frecuencia para describir personas, lugares, cosas y acciones.<br>
+                                        <strong>Alcance:</strong> Uso de adjetivos y adverbios en oraciones para proporcionar más información sobre los sustantivos y verbos.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='A1' categoria_lesson='Adjetivos y Adverbios' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="card mb-4" style="max-width: 970px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
-                                <p class="card-text">
-                                    <strong>Descripción:</strong> Las estructuras de preguntas y negaciones son esenciales para la comunicación. En el presente simple, las preguntas y negaciones se forman utilizando verbos regulares.<br>
-                                    <strong>Objetivo:</strong> Enseñar a formular preguntas y negaciones en presente simple utilizando verbos regulares.<br>
-                                    <strong>Alcance:</strong> Creación de preguntas y oraciones negativas en presente simple con verbos regulares en diversas situaciones.
-                                </p>
-                                <a href="#"><button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %} </strong><i class="fa fa-arrow-right"></i></button></a>
+
+                    <div class="card mb-4" style="max-width: 970px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'images/service/team-bg.jpg' %}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{% translate "Estructuras de Preguntas y Negaciones" %}</h5>
+                                    <p class="card-text">
+                                        <strong>Descripción:</strong> Las estructuras de preguntas y negaciones son esenciales para la comunicación. En el presente simple, las preguntas y negaciones se forman utilizando verbos regulares.<br>
+                                        <strong>Objetivo:</strong> Enseñar a formular preguntas y negaciones en presente simple utilizando verbos regulares.<br>
+                                        <strong>Alcance:</strong> Creación de preguntas y oraciones negativas en presente simple con verbos regulares en diversas situaciones.
+                                    </p>
+                                    <a href="{% url 'lesson_details' course_level='A1' categoria_lesson='Estructuras de Preguntas y Negaciones' %}">
+                                        <button type="button" class="btn" style="background: #ff561e; color:white"><strong>{% translate "VIEW MORE" %}</strong><i class="fa fa-arrow-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-        </section>
-    </body>
-    
-    
-</section><!--/.service-->
-    
+            </section>
+        </body>
+    </section>
 
+{% endblock %}
 
-
-
-
-
-      {%endblock%}
-
-      <script>
-        function validateLanguage() {
-            var languageSelect = document.getElementById("language");
-            if (languageSelect.value === "") {
-                alert("Choose Language is needed");
-                return false;
-            }
-            return true;
+<script>
+    function validateLanguage() {
+        var languageSelect = document.getElementById("language");
+        if (languageSelect.value === "") {
+            alert("Choose Language is needed");
+            return false;
         }
-    </script>
+        return true;
+    }
+</script>

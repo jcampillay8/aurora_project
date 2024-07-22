@@ -11,7 +11,7 @@ import json
 from apps.quiz_builder.forms.forms_partials.forms_dash_partials import (
     input_text, input_dropdown_field, create_modal_validation, create_modal_confirm
 )
-from apps.quiz_builder.forms.get_data_functions.get_data_from_db import get_courses_names, get_lesson_content, get_categoria_lesson, get_list_topic_father
+from apps.quiz_builder.forms.get_data_functions.get_data_from_db import get_courses_names, get_lesson_content, get_categoria_lesson, get_list_topic_father, get_list_topic_son
 from django.db import transaction
 from datetime import datetime
 from apps.quiz_builder.models import CourseLessonQuiz, QuizContent, UserAnswerScore
@@ -61,6 +61,11 @@ def serve_layout():
                                 ]),
                                 dbc.Row([
                                     dbc.Col(width=1),
+                                    dbc.Col(input_dropdown_field(name_dropdown='Topic Son: ', list_value_dropdown_field=[], id_dropdown_field='id_list_topic_son_dropdown'), width=10),
+                                    dbc.Col(width=1),
+                                ]),
+                                dbc.Row([
+                                    dbc.Col(width=1),
                                     dbc.Col(input_text(name_field='Quiz Name: ', type_field='text', id_name_field='id_quiz_name', disabled=False), width=10),
                                     dbc.Col(width=1),
                                 ]),
@@ -101,24 +106,10 @@ def serve_layout():
                                     ]), width=10),
                                     dbc.Col(width=1)
                                 ]),
-                                dbc.Row([
-                                    dbc.Col(width=1),
-                                    dbc.Col(create_modal_validation(message_modal='message', id_modal_message='id_modal_message_validation'), width=10),
-                                    dbc.Col(width=1),
-                                ]),
-                                dbc.Row([
-                                    dbc.Col(width=1),
-                                    dbc.Col(create_modal_confirm(), width=10),
-                                    dbc.Col(width=1),
-                                ]),
+
                                 dbc.Row([
                                     dbc.Col(width=1),
                                     dbc.Col(dbc.Button("Enviar", id='submit-button', color="primary"), width=10),
-                                    dbc.Col(width=1),
-                                ]),
-                                dbc.Row([
-                                    dbc.Col(width=1),
-                                    dbc.Col(dbc.Button("Guardar Contenido", id='save-content-button', color="secondary"), width=10),
                                     dbc.Col(width=1),
                                 ]),
                             ])
@@ -165,12 +156,15 @@ def update_lesson_content_dropdown(selected_lesson):
         return []
 
 @app.callback(
-    Output('id_list_topic_father_dropdown', 'options'),
-    Input('id_course_level_dropdown', 'value')
+    Output('id_list_topic_son_dropdown', 'options'),
+    Input('id_list_topic_father_dropdown', 'value')
 )
-def update_topic_father_dropdown(_):
-    topics = get_list_topic_father()
-    return [{'label': i, 'value': i} for i in topics]
+def update_topic_son_dropdown(selected_father):
+    if selected_father:
+        topics_son = get_list_topic_son(selected_father)
+        return [{'label': i, 'value': i} for i in topics_son]
+    else:
+        return []
 
 @app.callback(
     Output('output-data-upload', 'children'),
@@ -234,15 +228,15 @@ def parse_contents(contents, filename, date):
      State('id_categoria_lesson_dropdown', 'value'),
      State('id_lesson_content_dropdown', 'value'),
      State('id_list_topic_father_dropdown', 'value'),
+     State('id_list_topic_son_dropdown', 'value'),
      State('id_quiz_name', 'value'),
      State('output-data-upload', 'children'),
      State('quiz-table', 'data'),
      State('quiz-table', 'columns'),
-     State('user_id', 'children')
-     ],
+     State('user_id', 'children')],
     prevent_initial_call=True
 )
-def submit_and_save_quiz(n_clicks, course_level, categoria_lesson, lesson_content, topic_father, quiz_name, contents, rows, columns, user_id,request):
+def submit_and_save_quiz(n_clicks, course_level, categoria_lesson, lesson_content, topic_father, topic_son, quiz_name, contents, rows, columns, user_id, request):
     user = request.user
     id = request.session.get('id')  # Obtiene el id de la sesión
     user_id = user.id
@@ -261,7 +255,7 @@ def submit_and_save_quiz(n_clicks, course_level, categoria_lesson, lesson_conten
                     Categoria_Lesson=categoria_lesson,
                     Lesson_Content=lesson_content,
                     Topic_Father=topic_father,
-                    Topic_Son="Generico",
+                    Topic_Son=topic_son,
                     Quiz_Name=quiz_name
                 )
                 course_lesson_quiz.save()
@@ -293,5 +287,3 @@ def submit_and_save_quiz(n_clicks, course_level, categoria_lesson, lesson_conten
             return f"Ocurrió un error al crear el quiz: {str(e)}"
 
     return ""
-
-

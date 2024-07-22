@@ -1,0 +1,111 @@
+ID,Topic_Father,Topic_Son
+1,Generico,Básico
+2,Generico,Avanzado
+3,Generico,Intermedio
+4,Generico,Práctico
+5,Generico,Teórico
+6,Transporte,Autos
+7,Transporte,Carreras
+8,Transporte,Aviones
+9,Transporte,Barcos
+10,Transporte,Transporte Público
+11,Compras,Ropa
+12,Compras,Electrónicos
+13,Compras,Comida
+14,Compras,Muebles
+15,Compras,Libros
+16,Trabajo,Oficinas
+17,Trabajo,Trabajo Remoto
+18,Trabajo,Proyectos
+19,Trabajo,Reuniones
+20,Trabajo,Emprendimiento
+21,Educación,Escuelas
+22,Educación,Universidades
+23,Educación,Cursos Online
+24,Educación,Bibliotecas
+25,Educación,Seminarios
+26,Socialización,Redes Sociales
+27,Socialización,Eventos Sociales
+28,Socialización,Clubes
+29,Socialización,Voluntariado
+30,Socialización,Comunidades
+31,Eventos,Conciertos
+32,Eventos,Conferencias
+33,Eventos,Festivales
+34,Eventos,Ferias
+35,Eventos,Bodas
+36,Presentación y Exposición,Presentaciones Empresariales
+37,Presentación y Exposición,Exposiciones Artísticas
+38,Presentación y Exposición,Charlas
+39,Presentación y Exposición,Seminarios
+40,Presentación y Exposición,Talleres
+41,Historia,Historia Antigua
+42,Historia,Edad Media
+43,Historia,Historia Moderna
+44,Historia,Revoluciones
+45,Historia,Historia Contemporánea
+46,Comida y Cocina,Recetas
+47,Comida y Cocina,Restaurantes
+48,Comida y Cocina,Ingredientes
+49,Comida y Cocina,Técnicas de Cocina
+50,Comida y Cocina,Postres
+51,Tecnología e Innovación,Inteligencia Artificial
+52,Tecnología e Innovación,Robótica
+53,Tecnología e Innovación,Innovaciones Médicas
+54,Tecnología e Innovación,Energía Renovable
+55,Tecnología e Innovación,Internet de las Cosas
+56,Lugares,Ciudades
+57,Lugares,Monumentos
+58,Lugares,Parques Naturales
+59,Lugares,Museos
+60,Lugares,Sitios Históricos
+61,Música y Arte,Pintura
+62,Música y Arte,Escultura
+63,Música y Arte,Música Clásica
+64,Música y Arte,Rock
+65,Música y Arte,Jazz
+66,Familia y Amigos,Reuniones Familiares
+67,Familia y Amigos,Celebraciones
+68,Familia y Amigos,Apoyo Familiar
+69,Familia y Amigos,Actividades en Familia
+70,Familia y Amigos,Amistades
+71,Deportes,Fútbol
+72,Deportes,Baloncesto
+73,Deportes,Natación
+74,Deportes,Atletismo
+75,Deportes,Ciclismo
+76,Salud y Bienestar,Nutrición
+77,Salud y Bienestar,Ejercicio
+78,Salud y Bienestar,Salud Mental
+79,Salud y Bienestar,Medicina Preventiva
+80,Salud y Bienestar,Terapias Alternativas
+81,Naturaleza y Medio Ambiente,Conservación
+82,Naturaleza y Medio Ambiente,Cambio Climático
+83,Naturaleza y Medio Ambiente,Energías Renovables
+84,Naturaleza y Medio Ambiente,Biodiversidad
+85,Naturaleza y Medio Ambiente,Reciclaje
+86,Viajes y Turismo,Destinos Exóticos
+87,Viajes y Turismo,Cultura Local
+88,Viajes y Turismo,Guías de Viaje
+89,Viajes y Turismo,Aventura
+90,Viajes y Turismo,Cruceros
+91,Literatura y Cine,Novelas
+92,Literatura y Cine,Poesía
+93,Literatura y Cine,Películas Clásicas
+94,Literatura y Cine,Documentales
+95,Literatura y Cine,Obras de Teatro
+96,Ciencia y Exploración,Astronomía
+97,Ciencia y Exploración,Biología
+98,Ciencia y Exploración,Física
+99,Ciencia y Exploración,Exploraciones Espaciales
+100,Ciencia y Exploración,Oceanografía
+101,Finanzas y Economía,Inversiones
+102,Finanzas y Economía,Mercados Financieros
+103,Finanzas y Economía,Economía Global
+104,Finanzas y Economía,Planificación Financiera
+105,Finanzas y Economía,Emprendimientos
+106,Entrevista de Trabajo,Preguntas Comunes
+107,Entrevista de Trabajo,Consejos para Entrevistas
+108,Entrevista de Trabajo,Preparación
+109,Entrevista de Trabajo,Seguimiento Post-Entrevista
+110,Entrevista de Trabajo,Habilidades de Comunicación

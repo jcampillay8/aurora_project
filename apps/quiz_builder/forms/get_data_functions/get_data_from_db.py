@@ -1,6 +1,6 @@
 # apps/quiz_builder/forms/get_data_functions/get_data_from_db.py
 
-from apps.content_management.models import StructuredEnglishGrammarCourse, ListTopicFather
+from apps.content_management.models import StructuredEnglishGrammarCourse, ListTopicFather, ListTopicSon
 
 def get_courses_names():
     # Obtener todos los cursos únicos de la base de datos
@@ -21,3 +21,9 @@ def get_list_topic_father():
     # Obtener todos los valores de list_topic_father
     topics = ListTopicFather.objects.values_list('topic_father', flat=True).distinct()
     return list(topics)
+
+def get_list_topic_son(selected_father):
+    # Obtener todos los valores de list_topic_son basados en el topic_father seleccionado
+    father_instance = ListTopicFather.objects.get(topic_father=selected_father)
+    sons = ListTopicSon.objects.filter(topic_father=father_instance).values_list('topic_son', flat=True).distinct()
+    return list(sons)

@@ -22,6 +22,7 @@
                                     <strong>{% translate "Topic Father" %}:</strong> {{ lesson.Topic_Father }}<br>
                                     <strong>{% translate "Topic Son" %}:</strong> {{ lesson.Topic_Son }}<br>
                                 </p>
+                                <a href="{% url 'course_detail' lesson.id %}" class="btn btn-primary">{% translate "View Course" %}</a>
                             </div>
                         </div>
                     </div>
